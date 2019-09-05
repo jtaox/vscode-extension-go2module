@@ -1,0 +1,47 @@
+{
+	"name": "vscode-extension-go2module",
+	"displayName": "vscode-extension-go2module",
+	"description": "",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.33.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension-openbrowser",
+		"onLanguage:javascript"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension-openbrowser",
+				"title": "openbrowser"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"@babel/preset-env": "^7.4.4",
+		"@babel/preset-react": "^7.0.0",
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^10.12.21",
+		"tslint": "^5.12.1",
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28"
+	},
+	"dependencies": {
+		"@babel/parser": "^7.4.4",
+		"@babel/traverse": "^7.4.4",
+		"@types/request": "^2.48.1",
+		"request": "^2.88.0"
+	}
+}
